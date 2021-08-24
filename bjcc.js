@@ -21,3 +21,9 @@ document.onkeypress = e => {
     document.getElementById("slide").src = `bjcc${num}.png`;
     document.getElementById("phase").innerText = phases[num];
 };
+
+document.getElementById("slide").onclick = _ => {
+    num = (num + 1) % 8;
+    document.getElementById("slide").src = `bjcc${num}.png`;
+    document.getElementById("phase").innerText = phases[num];
+};
